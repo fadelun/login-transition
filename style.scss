@@ -102,6 +102,16 @@ main {
           font-size: 1rem;
         }
       }
+      .button-input > button {
+        width: 300px;
+        height: 50px;
+        font-size: 1.2rem;
+        background: #fe7f2d;
+        color: white;
+        font-weight: 600;
+        border: 1px solid transparent;
+        border-radius: 12px;
+      }
     }
   }
 }

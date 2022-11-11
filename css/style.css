@@ -83,4 +83,14 @@ main .form-page .input-group .input input {
   border-bottom: 1px solid black;
   height: 30px;
   font-size: 1rem;
+}
+main .form-page .input-group .button-input > button {
+  width: 300px;
+  height: 50px;
+  font-size: 1.2rem;
+  background: #fe7f2d;
+  color: white;
+  font-weight: 600;
+  border: 1px solid transparent;
+  border-radius: 12px;
 }/*# sourceMappingURL=style.css.map */
