@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@200;300;400;500;600&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -10,14 +12,21 @@ main {
   height: 100vh;
   position: relative;
   font-size: 18px;
+  font-family: "Commissioner", sans-serif;
 }
 main .message {
+  width: 100%;
   color: white;
 }
 main .form-page {
+  position: absolute;
+  background: #fdfffc;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
   /* transform: translate(-452px, -3px); */
-  width: 100%;
-  z-index: 2;
+  width: 60vw;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -25,15 +34,37 @@ main .form-page {
   flex-direction: column;
 }
 main .form-page .header {
-  background-color: #fe7f2d;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 200px;
 }
 main .form-page .header h1 {
+  font-family: "Readex Pro", sans-serif;
   font-weight: bold;
   text-transform: uppercase;
-  font-size: clamp(2rem, 4vw, 4rem);
+  font-size: clamp(2.5rem, 6vw, 3rem);
+  color: #fe7f2d;
+}
+main .form-page .header nav {
+  display: flex;
+  width: clamp(1rem, 40%, 9rem);
+  justify-content: space-between;
+}
+main .form-page .header nav a .fa-brands {
+  font-size: clamp(2rem, 3vw, 2.6rem);
+}
+main .form-page .header nav a .fa-facebook {
+  color: #1877f2;
+}
+main .form-page .header nav a .fa-google {
+  color: #c03b2c;
+}
+main .form-page .header nav a .fa-reddit {
+  color: #fc451d;
 }
 main .form-page .input-group {
-  background-color: #347299;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(4, 1fr);
@@ -41,11 +72,15 @@ main .form-page .input-group {
 }
 main .form-page .input-group .input {
   display: grid;
-  row-gap: 2px;
   align-content: center;
+}
+main .form-page .input-group .input label {
+  color: darkgray;
 }
 main .form-page .input-group .input input {
   outline: none;
   border: 1px solid transparent;
   border-bottom: 1px solid black;
+  height: 30px;
+  font-size: 1rem;
 }/*# sourceMappingURL=style.css.map */

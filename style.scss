@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@200;300;400;500;600&display=swap");
+
 $primary: #233d4d;
 $secondary: #fe7f2d;
 $white: #fdfffc;
@@ -14,21 +17,22 @@ main {
   height: 100vh;
   position: relative;
   font-size: 18px;
+  font-family: "Commissioner", sans-serif;
 
   .message {
-    // width: 40%;
+    width: 100%;
     color: white;
   }
   .form-page {
-    // position: absolute;
-    // background: $white;
-    // top: 0;
-    // right: 0;
-    // bottom: 0;
-    // padding: 20px;
+    position: absolute;
+    background: $white;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
     /* transform: translate(-452px, -3px); */
-    width: 100%;
-    z-index: 2;
+    width: 60vw;
+    // z-index: 2;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -36,16 +40,45 @@ main {
     flex-direction: column;
 
     .header {
-      background-color: #fe7f2d;
+      // background-color: #fe812d73;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      height: 200px;
 
       h1 {
+        font-family: "Readex Pro", sans-serif;
         font-weight: bold;
         text-transform: uppercase;
-        font-size: clamp(2rem, 4vw, 4rem);
+        font-size: clamp(2.5rem, 6vw, 3rem);
+        color: $secondary;
+      }
+
+      nav {
+        display: flex;
+        width: clamp(1rem, 40%, 9rem);
+        // background: aqua;
+        justify-content: space-between;
+
+        a {
+          .fa-brands {
+            font-size: clamp(2rem, 3vw, 2.6rem);
+          }
+          .fa-facebook {
+            color: #1877f2;
+          }
+          .fa-google {
+            color: #c03b2c;
+          }
+          .fa-reddit {
+            color: #fc451d;
+          }
+        }
       }
     }
     .input-group {
-      background-color: #347299;
+      // background-color: #34729988;
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: repeat(4, 1fr);
@@ -54,13 +87,19 @@ main {
       .input {
         display: grid;
 
-        row-gap: 2px;
         align-content: center;
+
+        label {
+          color: darkgray;
+        }
 
         input {
           outline: none;
           border: 1px solid transparent;
           border-bottom: 1px solid black;
+          height: 30px;
+
+          font-size: 1rem;
         }
       }
     }
