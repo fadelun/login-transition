@@ -20,13 +20,14 @@ main {
     color: white;
   }
   .form-page {
-    // position: absolute;
-    // background: $white;
-    // top: 0;
-    // right: 0;
-    // bottom: 0;
-    // padding: 20px;
+    position: absolute;
+    background: $white;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
     /* transform: translate(-452px, -3px); */
+
     width: 100%;
     z-index: 2;
     overflow: hidden;
