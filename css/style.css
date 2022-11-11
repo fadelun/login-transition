@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  background-color: #233d4d;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  font-size: 18px;
+}
+main .message {
+  color: white;
+}
+main .form-page {
+  /* transform: translate(-452px, -3px); */
+  width: 100%;
+  z-index: 2;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+main .form-page .header {
+  background-color: #fe7f2d;
+}
+main .form-page .header h1 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: clamp(2rem, 4vw, 4rem);
+}
+main .form-page .input-group {
+  background-color: #347299;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  height: clamp(150px, 40%, 320px);
+}
+main .form-page .input-group .input {
+  display: grid;
+  row-gap: 2px;
+  align-content: center;
+}
+main .form-page .input-group .input input {
+  outline: none;
+  border: 1px solid transparent;
+  border-bottom: 1px solid black;
+}/*# sourceMappingURL=style.css.map */
