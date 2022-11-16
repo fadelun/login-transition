@@ -14,11 +14,29 @@ main {
   font-size: 18px;
   font-family: "Commissioner", sans-serif;
 }
-main .message {
+main .side-one {
   width: 100%;
   color: white;
+  display: flex;
+  height: 100%;
+  gap: 30vw;
 }
-main .form-page {
+main .side-one .message {
+  flex: auto;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4rem;
+}
+main .side-one .message-one {
+  background-color: #c03b2c;
+}
+main .side-one .message-two {
+  background-color: #ff7b6d;
+}
+main .side-two {
   position: absolute;
   background: #fdfffc;
   top: 0;
@@ -28,66 +46,66 @@ main .form-page {
   /* transform: translate(-452px, -3px); */
   width: 60vw;
   overflow: hidden;
-  display: flex;
+  display: none;
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: column;
 }
-main .form-page .header {
+main .side-two .header {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   height: 200px;
 }
-main .form-page .header h1 {
+main .side-two .header h1 {
   font-family: "Readex Pro", sans-serif;
   font-weight: bold;
   text-transform: uppercase;
   font-size: clamp(2.5rem, 4vw, 5rem);
   color: #fe7f2d;
 }
-main .form-page .header nav {
+main .side-two .header nav {
   display: flex;
   width: 26%;
   justify-content: space-between;
 }
-main .form-page .header nav a .fa-brands {
+main .side-two .header nav a .fa-brands {
   font-size: clamp(2rem, 3vw, 2.6rem);
 }
-main .form-page .header nav a .fa-facebook {
+main .side-two .header nav a .fa-facebook {
   color: #1877f2;
 }
-main .form-page .header nav a .fa-google {
+main .side-two .header nav a .fa-google {
   color: #c03b2c;
 }
-main .form-page .header nav a .fa-reddit {
+main .side-two .header nav a .fa-reddit {
   color: #fc451d;
 }
-main .form-page .input-group {
+main .side-two .input-group {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(4, 1fr);
   height: clamp(150px, 40%, 320px);
 }
-main .form-page .input-group .input {
+main .side-two .input-group .input {
   display: grid;
   align-content: center;
 }
-main .form-page .input-group .input label {
+main .side-two .input-group .input label {
   color: darkgray;
 }
-main .form-page .input-group .input input {
+main .side-two .input-group .input input {
   outline: none;
   border: 1px solid transparent;
   border-bottom: 1px solid darkgray;
   height: 30px;
   font-size: 1rem;
 }
-main .form-page .input-group .button-input {
+main .side-two .input-group .button-input {
   place-items: center;
 }
-main .form-page .input-group .button-input > button {
+main .side-two .input-group .button-input > button {
   width: 300px;
   height: 50px;
   font-size: 1.2rem;
