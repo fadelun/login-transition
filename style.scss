@@ -29,7 +29,7 @@ main {
     top: 0;
     right: 0;
     bottom: 0;
-    padding: 20px;
+    padding: 40px 100px;
     /* transform: translate(-452px, -3px); */
     width: 60vw;
     // z-index: 2;
@@ -51,13 +51,13 @@ main {
         font-family: "Readex Pro", sans-serif;
         font-weight: bold;
         text-transform: uppercase;
-        font-size: clamp(2.5rem, 6vw, 3rem);
+        font-size: clamp(2.5rem, 4vw, 5rem);
         color: $secondary;
       }
 
       nav {
         display: flex;
-        width: clamp(1rem, 40%, 9rem);
+        width: 26%;
         // background: aqua;
         justify-content: space-between;
 
@@ -96,21 +96,25 @@ main {
         input {
           outline: none;
           border: 1px solid transparent;
-          border-bottom: 1px solid black;
+          border-bottom: 1px solid darkgray;
           height: 30px;
 
           font-size: 1rem;
         }
       }
-      .button-input > button {
-        width: 300px;
-        height: 50px;
-        font-size: 1.2rem;
-        background: #fe7f2d;
-        color: white;
-        font-weight: 600;
-        border: 1px solid transparent;
-        border-radius: 12px;
+      .button-input {
+        place-items: center;
+
+        & > button {
+          width: 300px;
+          height: 50px;
+          font-size: 1.2rem;
+          background: #fe7f2d;
+          color: white;
+          font-weight: 600;
+          border: 1px solid transparent;
+          border-radius: 12px;
+        }
       }
     }
   }

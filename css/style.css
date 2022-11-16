@@ -24,7 +24,7 @@ main .form-page {
   top: 0;
   right: 0;
   bottom: 0;
-  padding: 20px;
+  padding: 40px 100px;
   /* transform: translate(-452px, -3px); */
   width: 60vw;
   overflow: hidden;
@@ -44,12 +44,12 @@ main .form-page .header h1 {
   font-family: "Readex Pro", sans-serif;
   font-weight: bold;
   text-transform: uppercase;
-  font-size: clamp(2.5rem, 6vw, 3rem);
+  font-size: clamp(2.5rem, 4vw, 5rem);
   color: #fe7f2d;
 }
 main .form-page .header nav {
   display: flex;
-  width: clamp(1rem, 40%, 9rem);
+  width: 26%;
   justify-content: space-between;
 }
 main .form-page .header nav a .fa-brands {
@@ -80,9 +80,12 @@ main .form-page .input-group .input label {
 main .form-page .input-group .input input {
   outline: none;
   border: 1px solid transparent;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid darkgray;
   height: 30px;
   font-size: 1rem;
+}
+main .form-page .input-group .button-input {
+  place-items: center;
 }
 main .form-page .input-group .button-input > button {
   width: 300px;
