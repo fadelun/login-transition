@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 18px;
 }
 
 main {
@@ -11,7 +12,6 @@ main {
   width: 100vw;
   height: 100vh;
   position: relative;
-  font-size: 18px;
   font-family: "Commissioner", sans-serif;
 }
 main .side-one {
@@ -19,7 +19,7 @@ main .side-one {
   color: white;
   display: flex;
   height: 100%;
-  gap: 30vw;
+  gap: 24vw;
 }
 main .side-one .message {
   flex: auto;
@@ -30,11 +30,24 @@ main .side-one .message {
   justify-content: center;
   padding: 0 4rem;
 }
-main .side-one .message-one {
-  background-color: #c03b2c;
+main .side-one .message .message-caption {
+  height: 255px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  text-align: center;
 }
-main .side-one .message-two {
-  background-color: #ff7b6d;
+main .side-one .message .btn-enter {
+  width: clamp(1rem, 80%, 300px);
+  height: clamp(2rem, 8vh, 80px);
+  font-size: 1.2rem;
+  background: #fe7f2d;
+  color: white;
+  font-weight: 600;
+  border: 1px solid transparent;
+  border-radius: 50px;
 }
 main .side-two {
   position: absolute;
@@ -43,10 +56,9 @@ main .side-two {
   right: 0;
   bottom: 0;
   padding: 40px 100px;
-  /* transform: translate(-452px, -3px); */
   width: 60vw;
   overflow: hidden;
-  display: none;
+  display: flex;
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: column;
@@ -86,7 +98,7 @@ main .side-two .input-group {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(4, 1fr);
-  height: clamp(150px, 40%, 320px);
+  gap: 12px;
 }
 main .side-two .input-group .input {
   display: grid;
@@ -99,19 +111,19 @@ main .side-two .input-group .input input {
   outline: none;
   border: 1px solid transparent;
   border-bottom: 1px solid darkgray;
-  height: 30px;
+  height: 3rem;
   font-size: 1rem;
 }
 main .side-two .input-group .button-input {
   place-items: center;
 }
 main .side-two .input-group .button-input > button {
-  width: 300px;
-  height: 50px;
+  width: clamp(1rem, 80%, 300px);
+  height: clamp(2rem, 8vh, 80px);
   font-size: 1.2rem;
   background: #fe7f2d;
   color: white;
   font-weight: 600;
   border: 1px solid transparent;
-  border-radius: 12px;
+  border-radius: 50px;
 }/*# sourceMappingURL=style.css.map */
