@@ -12,6 +12,13 @@ $white: #fdfffc;
   font-size: 18px;
 }
 
+@mixin title-style() {
+  font-family: "Readex Pro", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: clamp(32px, 4vw, 46px);
+}
+
 main {
   background-color: $primary;
   width: 100vw;
@@ -57,6 +64,14 @@ main {
         border: 1px solid transparent;
         border-radius: 50px;
       }
+
+      h1 {
+        @include title-style();
+      }
+
+      p {
+        line-height: 2rem;
+      }
     }
   }
   .side-two {
@@ -65,7 +80,7 @@ main {
     top: 0;
     right: 0;
     bottom: 0;
-    padding: 40px 100px;
+    padding: 40px 180px;
     width: 60vw;
     overflow: hidden;
     display: flex;
@@ -81,31 +96,30 @@ main {
       height: 200px;
 
       h1 {
-        font-family: "Readex Pro", sans-serif;
-        font-weight: bold;
-        text-transform: uppercase;
-        font-size: clamp(2.5rem, 4vw, 5rem);
+        @include title-style();
         color: $secondary;
       }
 
       nav {
         display: flex;
-        width: 26%;
-        // background: aqua;
-        justify-content: space-between;
+        justify-content: center;
+        width: 100%;
+        gap: 8px;
 
-        a {
-          .fa-brands {
-            font-size: clamp(2rem, 3vw, 2.6rem);
+        .menu-item {
+          width: 2.2rem;
+          height: 2.2rem;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          svg {
+            fill: $primary;
           }
-          .fa-facebook {
-            color: #1877f2;
-          }
-          .fa-google {
-            color: #c03b2c;
-          }
-          .fa-reddit {
-            color: #fc451d;
+
+          &:hover > svg {
+            fill: $secondary;
           }
         }
       }
@@ -131,6 +145,7 @@ main {
           border: 1px solid transparent;
           border-bottom: 1px solid darkgray;
           height: 3rem;
+          font-family: "Readex Pro", sans-serif;
 
           font-size: 1rem;
         }
