@@ -63,6 +63,13 @@ main {
         font-weight: 600;
         border: 1px solid transparent;
         border-radius: 50px;
+        transition: 0.3s;
+
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.1);
+          box-shadow: 4px 4px 20px #fe7f2d8c;
+        }
       }
 
       h1 {
@@ -162,6 +169,12 @@ main {
           font-weight: 600;
           border: 1px solid transparent;
           border-radius: 50px;
+
+          &:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+            box-shadow: 4px 4px 20px #fe7f2d8c;
+          }
         }
       }
     }
