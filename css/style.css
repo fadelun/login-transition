@@ -48,6 +48,12 @@ main .side-one .message .btn-enter {
   font-weight: 600;
   border: 1px solid transparent;
   border-radius: 50px;
+  transition: 0.3s;
+}
+main .side-one .message .btn-enter:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  box-shadow: 4px 4px 20px rgba(254, 127, 45, 0.5490196078);
 }
 main .side-one .message h1 {
   font-family: "Readex Pro", sans-serif;
@@ -139,4 +145,7 @@ main .side-two .input-group .button-input > button {
   font-weight: 600;
   border: 1px solid transparent;
   border-radius: 50px;
+}
+main .side-two .input-group .button-input > button:hover {
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
