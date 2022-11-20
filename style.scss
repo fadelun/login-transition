@@ -43,6 +43,12 @@ main {
       align-items: center;
       justify-content: center;
       padding: 0 4rem;
+      transition: transform 1.4s, opacity 1s;
+
+      &.message-hidden {
+        transform: translateX(20vw);
+        opacity: 0;
+      }
 
       .message-caption {
         height: 255px;
@@ -91,6 +97,8 @@ main {
     width: 60%;
     overflow: hidden;
 
+    transition: right 1s ease-in-out;
+
     &.side-move {
       right: 40%;
     }
@@ -99,17 +107,10 @@ main {
       position: relative;
     }
 
-    .form-wrapper-one,
-    .form-wrapper-two {
+    .form-wrapper {
       position: absolute;
       inset: 4vh 8vw;
       margin: auto;
-      transition: transform 1.3s, opacity 1s;
-
-      &.form-wrapper-move {
-        transform: translateX(100vw);
-        opacity: 0;
-      }
 
       .header {
         display: flex;
@@ -150,13 +151,23 @@ main {
       .input-group {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 1fr) 14vh;
+        grid-template-rows: repeat(3, 1fr) 12vh;
         gap: 12px;
 
         .input {
           display: grid;
-
           align-content: end;
+
+          &.forget-password-input {
+            place-items: center;
+          }
+
+          & > .forget-link {
+            text-decoration: none;
+            color: $primary;
+            font-size: 1.2rem;
+            font-weight: 700;
+          }
 
           label {
             color: darkgray;
@@ -193,6 +204,22 @@ main {
             }
           }
         }
+      }
+    }
+
+    .form-wrapper-one {
+      transition: transform 1.4s, opacity 1s;
+      &.form-wrapper-hidden {
+        transform: translateX(100vw);
+        opacity: 0;
+      }
+    }
+
+    .form-wrapper-two {
+      transition: transform 1.4s, opacity 1s;
+      &.form-wrapper-hidden {
+        transform: translateX(-100vw);
+        opacity: 0;
       }
     }
   }
