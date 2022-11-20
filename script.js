@@ -2,39 +2,26 @@ const buttonEnter = document.querySelectorAll('.btn-enter')
 const formPage = document.querySelector(".form-page")
 const formWrapperOne = document.querySelector(".form-wrapper-one")
 const formWrapperTwo = document.querySelector(".form-wrapper-two")
-const messageOne = document.querySelector(".message-one")
+
+const slideMessage = document.querySelector(".slide-one")
 
 function handleButtonEnter() {
-    if (formPage.classList.contains("side-move")) {
-        formPage.classList.remove("side-move");
+    if (formPage.classList.contains("slide-move")) {
+        formPage.classList.remove("slide-move");
         formWrapperOne.classList.remove("form-wrapper-hidden")
         formWrapperTwo.classList.add('form-wrapper-hidden')
-        messageOne.classList.remove("message-hidden")
+        slideMessage.classList.remove('slide-move')
     } else {
-        formPage.classList.add('side-move')
+        formPage.classList.add('slide-move')
         formWrapperOne.classList.add('form-wrapper-hidden')
         formWrapperTwo.classList.remove("form-wrapper-hidden")
-        messageOne.classList.add("message-hidden")
+        slideMessage.classList.add('slide-move')
+
     }
-    // displayTransition()
+
 }
 
 buttonEnter.forEach(button => {
     button.addEventListener('click', handleButtonEnter)
 })
 
-function displayTransition() {
-    setTimeout(() => {
-        if (formPage.classList.contains('side-move')) {
-            formWrapperOne.style.display = "none"
-        }
-    }, 1000);
-
-    if (!formPage.classList.contains('side-move')) {
-        formWrapperOne.style.display = ""
-
-    }
-
-
-
-}

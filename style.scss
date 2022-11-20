@@ -27,12 +27,16 @@ main {
 
   font-family: "Commissioner", sans-serif;
 
-  .side-one {
-    width: 100%;
+  .slide-one {
+    width: 80%;
     color: white;
     display: flex;
     height: 100%;
-    gap: 24vw;
+    transition: 1s;
+
+    &.slide-move {
+      transform: translateX(25%);
+    }
     .message {
       flex: auto;
       display: flex;
@@ -43,12 +47,7 @@ main {
       align-items: center;
       justify-content: center;
       padding: 0 4rem;
-      transition: transform 1.4s, opacity 1s;
-
-      &.message-hidden {
-        transform: translateX(20vw);
-        opacity: 0;
-      }
+      transition: transform 0.5s, opacity 0.8s;
 
       .message-caption {
         height: 255px;
@@ -87,7 +86,7 @@ main {
       }
     }
   }
-  .side-two {
+  .slide-two {
     position: absolute;
     background: $white;
     top: 0;
@@ -96,10 +95,9 @@ main {
     padding: 40px 60px;
     width: 60%;
     overflow: hidden;
-
     transition: right 1s ease-in-out;
 
-    &.side-move {
+    &.slide-move {
       right: 40%;
     }
 
@@ -208,7 +206,7 @@ main {
     }
 
     .form-wrapper-one {
-      transition: transform 1.4s, opacity 1s;
+      transition: transform 1.4s, opacity 1.2s;
       &.form-wrapper-hidden {
         transform: translateX(100vw);
         opacity: 0;
@@ -216,7 +214,7 @@ main {
     }
 
     .form-wrapper-two {
-      transition: transform 1.4s, opacity 1s;
+      transition: transform 1.4s, opacity 1.2s;
       &.form-wrapper-hidden {
         transform: translateX(-100vw);
         opacity: 0;
