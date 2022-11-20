@@ -70,35 +70,53 @@ main .side-two {
   top: 0;
   right: 0;
   bottom: 0;
-  padding: 40px 180px;
-  width: 60vw;
+  padding: 40px 60px;
+  width: 60%;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  flex-direction: column;
 }
-main .side-two .header {
+main .side-two.side-move {
+  right: 40%;
+}
+main .side-two .form-container {
+  position: relative;
+}
+main .side-two .form-wrapper-one,
+main .side-two .form-wrapper-two {
+  position: absolute;
+  inset: 4vh 8vw;
+  margin: auto;
+  transition: transform 1.3s, opacity 1s;
+}
+main .side-two .form-wrapper-one.form-wrapper-move,
+main .side-two .form-wrapper-two.form-wrapper-move {
+  transform: translateX(100vw);
+  opacity: 0;
+}
+main .side-two .form-wrapper-one .header,
+main .side-two .form-wrapper-two .header {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   height: 200px;
 }
-main .side-two .header h1 {
+main .side-two .form-wrapper-one .header h1,
+main .side-two .form-wrapper-two .header h1 {
   font-family: "Readex Pro", sans-serif;
   font-weight: bold;
   text-transform: uppercase;
   font-size: clamp(32px, 4vw, 46px);
   color: #fe7f2d;
 }
-main .side-two .header nav {
+main .side-two .form-wrapper-one .header nav,
+main .side-two .form-wrapper-two .header nav {
   display: flex;
   justify-content: center;
   width: 100%;
   gap: 8px;
 }
-main .side-two .header nav .menu-item {
+main .side-two .form-wrapper-one .header nav .menu-item,
+main .side-two .form-wrapper-two .header nav .menu-item {
   width: 2.2rem;
   height: 2.2rem;
   border-radius: 50%;
@@ -106,26 +124,32 @@ main .side-two .header nav .menu-item {
   justify-content: center;
   align-items: center;
 }
-main .side-two .header nav .menu-item svg {
+main .side-two .form-wrapper-one .header nav .menu-item svg,
+main .side-two .form-wrapper-two .header nav .menu-item svg {
   fill: #233d4d;
 }
-main .side-two .header nav .menu-item:hover > svg {
+main .side-two .form-wrapper-one .header nav .menu-item:hover > svg,
+main .side-two .form-wrapper-two .header nav .menu-item:hover > svg {
   fill: #fe7f2d;
 }
-main .side-two .input-group {
+main .side-two .form-wrapper-one .input-group,
+main .side-two .form-wrapper-two .input-group {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr) 14vh;
   gap: 12px;
 }
-main .side-two .input-group .input {
+main .side-two .form-wrapper-one .input-group .input,
+main .side-two .form-wrapper-two .input-group .input {
   display: grid;
-  align-content: center;
+  align-content: end;
 }
-main .side-two .input-group .input label {
+main .side-two .form-wrapper-one .input-group .input label,
+main .side-two .form-wrapper-two .input-group .input label {
   color: darkgray;
 }
-main .side-two .input-group .input input {
+main .side-two .form-wrapper-one .input-group .input input,
+main .side-two .form-wrapper-two .input-group .input input {
   outline: none;
   border: 1px solid transparent;
   border-bottom: 1px solid darkgray;
@@ -133,10 +157,12 @@ main .side-two .input-group .input input {
   font-family: "Readex Pro", sans-serif;
   font-size: 1rem;
 }
-main .side-two .input-group .button-input {
+main .side-two .form-wrapper-one .input-group .button-input,
+main .side-two .form-wrapper-two .input-group .button-input {
   place-items: center;
 }
-main .side-two .input-group .button-input > button {
+main .side-two .form-wrapper-one .input-group .button-input > button,
+main .side-two .form-wrapper-two .input-group .button-input > button {
   width: clamp(1rem, 80%, 300px);
   height: clamp(2rem, 8vh, 80px);
   font-size: 1.2rem;
@@ -145,7 +171,11 @@ main .side-two .input-group .button-input > button {
   font-weight: 600;
   border: 1px solid transparent;
   border-radius: 50px;
+  transition: 0.3s;
 }
-main .side-two .input-group .button-input > button:hover {
+main .side-two .form-wrapper-one .input-group .button-input > button:hover,
+main .side-two .form-wrapper-two .input-group .button-input > button:hover {
   cursor: pointer;
+  transform: scale(1.1);
+  box-shadow: 4px 4px 20px rgba(254, 127, 45, 0.5490196078);
 }/*# sourceMappingURL=style.css.map */
