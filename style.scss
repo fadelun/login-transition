@@ -27,12 +27,16 @@ main {
 
   font-family: "Commissioner", sans-serif;
 
-  .side-one {
-    width: 100%;
+  .slide-one {
+    width: 80%;
     color: white;
     display: flex;
     height: 100%;
-    gap: 24vw;
+    transition: 1s;
+
+    &.slide-move {
+      transform: translateX(25%);
+    }
     .message {
       flex: auto;
       display: flex;
@@ -43,6 +47,7 @@ main {
       align-items: center;
       justify-content: center;
       padding: 0 4rem;
+      transition: transform 0.5s, opacity 0.8s;
 
       .message-caption {
         height: 255px;
@@ -81,101 +86,138 @@ main {
       }
     }
   }
-  .side-two {
+  .slide-two {
     position: absolute;
     background: $white;
     top: 0;
     right: 0;
     bottom: 0;
-    padding: 40px 180px;
-    width: 60vw;
+    padding: 40px 60px;
+    width: 60%;
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-direction: column;
+    transition: right 1s ease-in-out;
 
-    .header {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-      height: 200px;
+    &.slide-move {
+      right: 40%;
+    }
 
-      h1 {
-        @include title-style();
-        color: $secondary;
-      }
+    .form-container {
+      position: relative;
+    }
 
-      nav {
+    .form-wrapper {
+      position: absolute;
+      inset: 4vh 8vw;
+      margin: auto;
+
+      .header {
         display: flex;
-        justify-content: center;
-        width: 100%;
-        gap: 8px;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 200px;
 
-        .menu-item {
-          width: 2.2rem;
-          height: 2.2rem;
-          border-radius: 50%;
+        h1 {
+          @include title-style();
+          color: $secondary;
+        }
+
+        nav {
           display: flex;
           justify-content: center;
-          align-items: center;
+          width: 100%;
+          gap: 8px;
 
-          svg {
-            fill: $primary;
+          .menu-item {
+            width: 2.2rem;
+            height: 2.2rem;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            svg {
+              fill: $primary;
+            }
+
+            &:hover > svg {
+              fill: $secondary;
+            }
+          }
+        }
+      }
+      .input-group {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr) 12vh;
+        gap: 12px;
+
+        .input {
+          display: grid;
+          align-content: end;
+
+          &.forget-password-input {
+            place-items: center;
           }
 
-          &:hover > svg {
-            fill: $secondary;
+          & > .forget-link {
+            text-decoration: none;
+            color: $primary;
+            font-size: 1.2rem;
+            font-weight: 700;
+          }
+
+          label {
+            color: darkgray;
+          }
+
+          input {
+            outline: none;
+            border: 1px solid transparent;
+            border-bottom: 1px solid darkgray;
+            height: 3rem;
+            font-family: "Readex Pro", sans-serif;
+
+            font-size: 1rem;
+          }
+        }
+        .button-input {
+          place-items: center;
+
+          & > button {
+            width: clamp(1rem, 80%, 300px);
+            height: clamp(2rem, 8vh, 80px);
+            font-size: 1.2rem;
+            background: #fe7f2d;
+            color: white;
+            font-weight: 600;
+            border: 1px solid transparent;
+            border-radius: 50px;
+            transition: 0.3s;
+
+            &:hover {
+              cursor: pointer;
+              transform: scale(1.1);
+              box-shadow: 4px 4px 20px #fe7f2d8c;
+            }
           }
         }
       }
     }
-    .input-group {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(4, 1fr);
-      // height: clamp(150px, 40%, 400px);
-      gap: 12px;
 
-      .input {
-        display: grid;
-
-        align-content: center;
-
-        label {
-          color: darkgray;
-        }
-
-        input {
-          outline: none;
-          border: 1px solid transparent;
-          border-bottom: 1px solid darkgray;
-          height: 3rem;
-          font-family: "Readex Pro", sans-serif;
-
-          font-size: 1rem;
-        }
+    .form-wrapper-one {
+      transition: transform 1.4s, opacity 1.2s;
+      &.form-wrapper-hidden {
+        transform: translateX(100vw);
+        opacity: 0;
       }
-      .button-input {
-        place-items: center;
+    }
 
-        & > button {
-          width: clamp(1rem, 80%, 300px);
-          height: clamp(2rem, 8vh, 80px);
-          font-size: 1.2rem;
-          background: #fe7f2d;
-          color: white;
-          font-weight: 600;
-          border: 1px solid transparent;
-          border-radius: 50px;
-
-          &:hover {
-            cursor: pointer;
-            transform: scale(1.1);
-            box-shadow: 4px 4px 20px #fe7f2d8c;
-          }
-        }
+    .form-wrapper-two {
+      transition: transform 1.4s, opacity 1.2s;
+      &.form-wrapper-hidden {
+        transform: translateX(-100vw);
+        opacity: 0;
       }
     }
   }
